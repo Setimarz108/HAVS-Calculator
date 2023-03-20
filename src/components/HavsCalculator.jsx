@@ -3,12 +3,10 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import {
   Box,
   Button,
-  Input,
   Select,
   Text,
   HStack,
   Flex,
-  flexbox,
   NumberInput,
   NumberInputField,
   NumberInputStepper,
@@ -73,8 +71,14 @@ const HavsCalculator = () => {
         </div>
       </Flex>
       <Flex direction={"row"} id="calculatorBorder">
-        <Box maxW="md" mx="auto" my={"10%"} >
-          <Text fontSize="xl" fontWeight="bold" mb="10" mt={-10} align={"center"}>
+        <Box maxW="md" mx="auto" my={"10%"}>
+          <Text
+            fontSize="xl"
+            fontWeight="bold"
+            mb="10"
+            mt={-10}
+            align={"center"}
+          >
             <FormattedMessage id="title" />
           </Text>
           <HStack spacing="40" mb={"80px"}>
@@ -121,11 +125,16 @@ const HavsCalculator = () => {
 
           <HStack my={"30px"}>
             <Flex justifyContent={"space-around"}>
-              <Button bg="teal.200" onClick={calculateResult} mx={"0px"} mr={"10px"}>
+              <Button
+                bg="teal.200"
+                onClick={calculateResult}
+                mx={"0px"}
+                mr={"10px"}
+              >
                 <FormattedMessage id="calculateButtonLabel" />
               </Button>
 
-              <h4 style={{marginLeft:"12rem"}}>
+              <h4 style={{ marginLeft: "12rem" }}>
                 <FormattedMessage id="resultLabel" />
                 {result}
               </h4>
